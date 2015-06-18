@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Find Your Fire. Your map to the hottest hot chicken joints in Nashville">
+      <title>Find your Fire: The Hottest Hot Chicken in Nashville</title>
+      <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+
+      <div class="wrapper">
+          <div id="map-canvas"></div><!-- end map-canvas -->
+
+          <div id="search-area">
+              <input id="searchbar" data-bind="textInput: searchString" type="text" placeholder="Search for a hot chicken joint" />
+          </div><!-- end search area -->
+
+          <div id="places-area">
+
+              <h1 id="places-heading"><span data-bind="text: numRestaurants"></span> Hot Chicken Joints in Nashville</h1>
+
+              <ul id="place-list" data-bind="foreach: places">
+                  <li data-bind="visible: isActive, text: name, click: $parent.placeClicked, css: { selected: isSelected()    }"></li>
+              </ul>
+
+          </div><!-- end places-area --> 
+      </div><!-- end wrapper -->
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAod1UVSvoMd3BDFz717WEMKiPKkXMVV6g"></script>
+      <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+      <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+      <script src='js/jquery-1.11.3.min.js'></script>
+      <script type='text/javascript' src='js/knockout-3.3.0.js'></script>
+      <script src="js/map.min.js"></script>
+
+  </body>
+</html>

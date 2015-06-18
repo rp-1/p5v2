@@ -1,0 +1,246 @@
+
+/* DEFAULT CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Paul Irish: apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* GLOBAL */
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+
+/* Must define attributes for each of the 
+/* following or nothing shows up */
+html, body, #map-canvas {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+#search-area {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30%;
+}
+
+#searchbar {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#map_canvas {
+    overflow: auto;
+    line-height: normal ! important;
+}
+
+#places-area {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    max-height: 80%;
+    width: 30%;
+    background-color: #FFFF99;
+    color: #FC672E;
+    float: left;
+    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    overflow: scroll;
+    opacity: .9;
+}
+
+#places-heading {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.8em;
+    color: #FC672E;
+}
+
+#place-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+}
+
+#place-list li {
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    border-top: 1px solid #000;
+    font-size: 1.2em;
+}
+
+.selected {
+    background-color: #FC672E;
+    color: #fff;
+}
+
+.info-window {
+    width: 320px;
+    height: 310px;
+    line-height:1.35;
+}   
+
+.info-window p {
+    margin: 0;
+}
+
+.info-window hr {
+    color: lightgray;
+    padding-right: 10px;
+}
+
+.info-window a {
+    color: #FC672E;
+    font-style: italic;
+}
+
+.rating-section {
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.rating-img {
+    display: inline-block;
+    float: left;
+}
+
+p.rating-text {
+    display: inline-block;
+    float: left;
+    margin-left: 8px;
+}
+
+.clear {
+    clear: both;
+}
+
+.info-window h3,
+.info-window h4,
+.info-window h5 {
+    color: #FC672E;
+    margin: 0;
+    padding: 0;
+}
+
+.info-window-main-img {
+    width: 150px;
+}
+
+.global-error {
+    width: 80%;
+    margin: 10% auto;
+    background-color: bisque;
+    color: #FC672E;
+}
+
+.global-error a {
+    color: #FC672E;
+}
+/* Laptops and Desktops */
+@media screen and (min-width: 769px) {
+    
+    #place-list li:hover {
+        background-color: #FC672E;
+        color: #fff;
+    }
+}
+/* Tablets */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    #places-heading {
+        font-size: 1.4em;
+    }
+}
+/* Smartphones */
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    #search-area {
+        left: 5%;
+        width: 90%;
+    }
+
+    #places-area {
+        left: 5%;
+        width: 90%;
+    }
+
+    .info-window {
+        width: 290px;
+    }  
+
+}
